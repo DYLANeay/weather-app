@@ -12,7 +12,11 @@
     "build": "webpack",
     "dev": "webpack serve",
     "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  "dependencies": {
+    "crypto-browserify": "^3.12.1",
+    "dotenv": "^16.4.7",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1"
   }
-  
 }
-
