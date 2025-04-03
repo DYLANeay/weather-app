@@ -9,4 +9,4 @@
 /package-lock.json
 /yarn.lock
 .DS_Store
-/webpack.config.js
+webpack.config.js
