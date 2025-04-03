@@ -1,6 +1,7 @@
-// webpack.config.js
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -18,6 +19,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
     }),
+    new Dotenv({
+      path: './.env', // assuming you have a .env file in your root directory
+    }),
+    new webpack.EnvironmentPlugin({
+      API_KEY: 'KCTHAJZQZNWSG2EP9Y3X7XBBB',
+    }),
   ],
   module: {
     rules: [
@@ -34,5 +41,16 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    fallback: {
+      process: require.resolve('process/browser'),
+      path: false,
+      crypto: false,
+      os: false,
+      buffer: false,
+      stream: false,
+      vm: false,
+    },
   },
 };

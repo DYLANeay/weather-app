@@ -1,6 +1,7 @@
 import './style.css';
 import { changeUnit, handleFormSubmit, hideLoading } from './ui.js';
 import { fetchWeatherData } from './api.js';
+const API_KEY = process.env.API_KEY;
 
 document.addEventListener('DOMContentLoaded', function () {
   // Get DOM elements
@@ -8,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const locationInput = document.getElementById('location-input');
   const celsiusBtn = document.getElementById('celsius-btn');
   const fahrenheitBtn = document.getElementById('fahrenheit-btn');
-
-  // API key - replace with your Visual Crossing API key
-  const API_KEY = 'KCTHAJZQZNWSG2EP9Y3X7XBBB';
 
   let currentUnit = 'celsius'; // Default temperature unit
   let weatherData = null; // Store the weather data
