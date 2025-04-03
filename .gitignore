@@ -1,1 +1,12 @@
-/webpack.config.js: This ignores the Webpack configuration file.
+# Node.js dependencies
+/node_modules/
+
+# Ignore specific files in node_modules
+/node_modules/public-encrypt/test/*
+/node_modules/public-encrypt/test_rsa_privkey.pem
+
+# Other files to ignore
+/package-lock.json
+/yarn.lock
+.DS_Store
+/webpack.config.js
