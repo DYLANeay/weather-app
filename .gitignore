@@ -1,1 +1,1 @@
-./src/config.js
+/webpack.config.js: This ignores the Webpack configuration file.
